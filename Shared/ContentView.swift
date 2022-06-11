@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State var show: Bool = false
     @State var scale: Bool = false
+    @State var viewState = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -23,32 +24,55 @@ struct ContentView: View {
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -400 : -40)
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.9)
                 .rotationEffect(.degrees(show ? 0 : 10))
                 .rotation3DEffect(.degrees(10), axis: (x: 1.0, y: 0.0, z: 0.0))
                 .blendMode(.hardLight)
                 .animation(.easeInOut(duration: 0.5), value: show)
+                .animation(.easeInOut(duration: 0.5), value: viewState)
             
             BackCardView()
                 .background(show ? Color("card4") : Color("card3"))
                 .cornerRadius(20)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -200 : -20)
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(.degrees(show ? 0 : 5))
                 .rotation3DEffect(.degrees(10), axis: (x: 1.0, y: 0.0, z: 0.0))
                 .blendMode(.hardLight)
                 .animation(.easeInOut(duration: 0.3), value: show)
+                .animation(.easeInOut(duration: 0.3), value: viewState)
 
             CardView()
+                .offset(x: viewState.width, y: viewState.height)
                 .blendMode(.hardLight)
                 .scaleEffect(scale ? 1.05 : 1)
                 .animation(.easeInOut(duration: 0.3), value: scale)
-                .onLongPressGesture(minimumDuration: 1, maximumDistance: 1) {
-                    self.show.toggle()
+                .animation(
+                    .spring(response: 0.3,
+                            dampingFraction: 0.6,
+                            blendDuration: 0),
+                    value: viewState
+                )
+            
+                .onLongPressGesture(minimumDuration: 0.3, maximumDistance: 0) {
+                    show.toggle()
                 } onPressingChanged: { _ in
-                    self.scale.toggle()
+                    scale.toggle()
                 }
+            
+                .gesture(
+                    DragGesture().onChanged({ value in
+                        viewState = value.translation
+                        show = true
+                    })
+                    .onEnded({ value in
+                        viewState = .zero
+                        show = false
+                    })
+                )
             
             BottomCardView()
                 .blur(radius: show ? 0 : 20)
