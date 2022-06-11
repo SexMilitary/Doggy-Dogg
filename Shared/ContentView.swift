@@ -57,9 +57,8 @@ struct ContentView: View {
                     value: viewState
                 )
             
-                .onLongPressGesture(minimumDuration: 0.3, maximumDistance: 0) {
+                .onTapGesture {
                     show.toggle()
-                } onPressingChanged: { _ in
                     scale.toggle()
                 }
             
