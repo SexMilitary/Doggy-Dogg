@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5944542855276500FC98F5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944532855276500FC98F5 /* CardView.swift */; };
+		1C5944552855276500FC98F5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944532855276500FC98F5 /* CardView.swift */; };
+		1C5944572855278600FC98F5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944562855278600FC98F5 /* TitleView.swift */; };
+		1C5944582855278600FC98F5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944562855278600FC98F5 /* TitleView.swift */; };
+		1C59445A285527B900FC98F5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C594459285527B900FC98F5 /* BackCardView.swift */; };
+		1C59445B285527B900FC98F5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C594459285527B900FC98F5 /* BackCardView.swift */; };
+		1C59445D285527D800FC98F5 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59445C285527D800FC98F5 /* BottomCardView.swift */; };
+		1C59445E285527D800FC98F5 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59445C285527D800FC98F5 /* BottomCardView.swift */; };
 		1CA83503285286E4008811E9 /* DoggyDoggApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */; };
 		1CA83504285286E4008811E9 /* DoggyDoggApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */; };
 		1CA83505285286E4008811E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA834F4285286E0008811E9 /* ContentView.swift */; };
@@ -16,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C5944532855276500FC98F5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		1C5944562855278600FC98F5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		1C594459285527B900FC98F5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
+		1C59445C285527D800FC98F5 /* BottomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
 		1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggyDoggApp.swift; sourceTree = "<group>"; };
 		1CA834F4285286E0008811E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1CA834F5285286E3008811E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +68,10 @@
 			children = (
 				1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */,
 				1CA834F4285286E0008811E9 /* ContentView.swift */,
+				1C5944562855278600FC98F5 /* TitleView.swift */,
+				1C5944532855276500FC98F5 /* CardView.swift */,
+				1C594459285527B900FC98F5 /* BackCardView.swift */,
+				1C59445C285527D800FC98F5 /* BottomCardView.swift */,
 				1CA834F5285286E3008811E9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -177,7 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA83505285286E4008811E9 /* ContentView.swift in Sources */,
+				1C59445D285527D800FC98F5 /* BottomCardView.swift in Sources */,
+				1C5944542855276500FC98F5 /* CardView.swift in Sources */,
 				1CA83503285286E4008811E9 /* DoggyDoggApp.swift in Sources */,
+				1C59445A285527B900FC98F5 /* BackCardView.swift in Sources */,
+				1C5944572855278600FC98F5 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA83506285286E4008811E9 /* ContentView.swift in Sources */,
+				1C59445E285527D800FC98F5 /* BottomCardView.swift in Sources */,
+				1C5944552855276500FC98F5 /* CardView.swift in Sources */,
 				1CA83504285286E4008811E9 /* DoggyDoggApp.swift in Sources */,
+				1C59445B285527B900FC98F5 /* BackCardView.swift in Sources */,
+				1C5944582855278600FC98F5 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
