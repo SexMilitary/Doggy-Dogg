@@ -37,10 +37,6 @@ struct CardView: View {
                 .frame(height: 110, alignment: .top)
                 .padding(.horizontal, 20)
         }
-        .frame(width: 340, height: 200)
-        .background(.black)
-        .cornerRadius(20)
-        .shadow(radius: 20)
     }
 }
 
