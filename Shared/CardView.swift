@@ -36,7 +36,9 @@ struct CardView: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 110, alignment: .top)
                 .padding(.horizontal, 20)
+                .allowsHitTesting(false)
         }
+        .background(.black)
     }
 }
 

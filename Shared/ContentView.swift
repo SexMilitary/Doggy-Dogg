@@ -14,6 +14,7 @@ struct ContentView: View {
     @State var viewState = CGSize.zero
     @State var showCard: Bool = false
     @State var botomViewState = CGSize.zero
+    @State var showFull: Bool = false
     
     var body: some View {
         ZStack {
@@ -77,7 +78,6 @@ struct ContentView: View {
             
             CardView()
                 .frame(width: showCard ? 365 : 340, height: 200)
-                .background(.black)
                 .shadow(radius: 20)
                 .clipShape(
                     RoundedRectangle(
@@ -115,24 +115,40 @@ struct ContentView: View {
                 )
             
             BottomCardView()
+                .offset(y: showCard ? 500 : 1000)
+                .offset(y: botomViewState.height)
+            
                 .blur(radius: showCard ? 0 : 20)
-                .offset(x: 0, y: showCard ? 500 : 1000)
+            
                 .animation(.timingCurve(0.3, 0.8, 0.2, 1, duration: 0.8),
                            value: showCard)
                 .animation(.default, value: botomViewState)
-                .offset(y: botomViewState.height)
+            
                 .gesture(
                     DragGesture().onChanged({ value in
-                        guard value.translation.height > -100 else {
-                            return
-                        }
                         botomViewState = value.translation
+                        if showFull {
+                            botomViewState.height += -300
+                            guard botomViewState.height > -350 else {
+                                botomViewState.height = -350
+                                return
+                            }
+                        }
                     })
                     .onEnded({ value in
-                        botomViewState = .zero
-                        guard value.translation.height < 100 else {
+                        if botomViewState.height > 50 {
                             showCard = false
-                            return
+                        }
+                        if botomViewState.height < -300 {
+                            botomViewState.height = -300
+                        }
+                        if (botomViewState.height < -100 && !showFull) ||
+                            (botomViewState.height < -250 && showFull) {
+                            botomViewState.height = -300
+                            showFull = true
+                        } else {
+                            botomViewState.height = .zero
+                            showFull = false
                         }
                     })
                 )
