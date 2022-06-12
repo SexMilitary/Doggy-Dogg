@@ -29,7 +29,7 @@ struct Home: View {
                     x: 0, y: 20
                 )
                 .rotation3DEffect(
-                    Angle(degrees: showProfile ? (viewState.height / 10 - CGFloat(10)) : 0),
+                    Angle(degrees: showProfile ? (viewState.height / 60 - CGFloat(10)) : 0),
                     axis: (x: 1.0, y: 0.0, z: 0.0)
                 )
                 .animation(.spring(), value: showProfile)
@@ -51,6 +51,9 @@ struct Home: View {
                 .gesture(
                     DragGesture().onChanged({ value in
                         viewState = value.translation
+                        if viewState.height < -200 {
+                            viewState.height = -200
+                        }
                     })
                     .onEnded({ _ in
                         if viewState.height > 50 {
