@@ -15,12 +15,18 @@
 		1C59445B285527B900FC98F5 /* BackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C594459285527B900FC98F5 /* BackCardView.swift */; };
 		1C59445D285527D800FC98F5 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59445C285527D800FC98F5 /* BottomCardView.swift */; };
 		1C59445E285527D800FC98F5 /* BottomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59445C285527D800FC98F5 /* BottomCardView.swift */; };
+		1C5944612856009F00FC98F5 /* MenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944602856009F00FC98F5 /* MenuRowView.swift */; };
+		1C5944622856009F00FC98F5 /* MenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944602856009F00FC98F5 /* MenuRowView.swift */; };
 		1CA83503285286E4008811E9 /* DoggyDoggApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */; };
 		1CA83504285286E4008811E9 /* DoggyDoggApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */; };
 		1CA83505285286E4008811E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA834F4285286E0008811E9 /* ContentView.swift */; };
 		1CA83506285286E4008811E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA834F4285286E0008811E9 /* ContentView.swift */; };
 		1CA83507285286E4008811E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA834F5285286E3008811E9 /* Assets.xcassets */; };
 		1CA83508285286E4008811E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA834F5285286E3008811E9 /* Assets.xcassets */; };
+		1CFAA6BB28560526004C28C4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFAA6BA28560526004C28C4 /* MenuView.swift */; };
+		1CFAA6BC28560526004C28C4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFAA6BA28560526004C28C4 /* MenuView.swift */; };
+		1CFAA6BE28561783004C28C4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFAA6BD28561783004C28C4 /* Color+Extension.swift */; };
+		1CFAA6BF28561783004C28C4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFAA6BD28561783004C28C4 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +34,15 @@
 		1C5944562855278600FC98F5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		1C594459285527B900FC98F5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
 		1C59445C285527D800FC98F5 /* BottomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardView.swift; sourceTree = "<group>"; };
+		1C5944602856009F00FC98F5 /* MenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRowView.swift; sourceTree = "<group>"; };
 		1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoggyDoggApp.swift; sourceTree = "<group>"; };
 		1CA834F4285286E0008811E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1CA834F5285286E3008811E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CA834FA285286E3008811E9 /* DoggyDogg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoggyDogg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA83500285286E3008811E9 /* DoggyDogg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoggyDogg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA83502285286E4008811E9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		1CFAA6BA28560526004C28C4 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		1CFAA6BD28561783004C28C4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,9 @@
 				1C5944532855276500FC98F5 /* CardView.swift */,
 				1C594459285527B900FC98F5 /* BackCardView.swift */,
 				1C59445C285527D800FC98F5 /* BottomCardView.swift */,
+				1CFAA6BA28560526004C28C4 /* MenuView.swift */,
+				1C5944602856009F00FC98F5 /* MenuRowView.swift */,
+				1CFAA6BD28561783004C28C4 /* Color+Extension.swift */,
 				1CA834F5285286E3008811E9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -193,10 +205,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA83505285286E4008811E9 /* ContentView.swift in Sources */,
+				1CFAA6BE28561783004C28C4 /* Color+Extension.swift in Sources */,
+				1CFAA6BB28560526004C28C4 /* MenuView.swift in Sources */,
 				1C59445D285527D800FC98F5 /* BottomCardView.swift in Sources */,
 				1C5944542855276500FC98F5 /* CardView.swift in Sources */,
 				1CA83503285286E4008811E9 /* DoggyDoggApp.swift in Sources */,
 				1C59445A285527B900FC98F5 /* BackCardView.swift in Sources */,
+				1C5944612856009F00FC98F5 /* MenuRowView.swift in Sources */,
 				1C5944572855278600FC98F5 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,10 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA83506285286E4008811E9 /* ContentView.swift in Sources */,
+				1CFAA6BF28561783004C28C4 /* Color+Extension.swift in Sources */,
+				1CFAA6BC28560526004C28C4 /* MenuView.swift in Sources */,
 				1C59445E285527D800FC98F5 /* BottomCardView.swift in Sources */,
 				1C5944552855276500FC98F5 /* CardView.swift in Sources */,
 				1CA83504285286E4008811E9 /* DoggyDoggApp.swift in Sources */,
 				1C59445B285527B900FC98F5 /* BackCardView.swift in Sources */,
+				1C5944622856009F00FC98F5 /* MenuRowView.swift in Sources */,
 				1C5944582855278600FC98F5 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
