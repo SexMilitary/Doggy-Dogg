@@ -19,16 +19,7 @@ struct MenuView: View {
                 Text("Meng - 28% complete")
                     .font(.caption)
                 
-                Color.white
-                    .frame(width: 38, height: 6, alignment: .center)
-                    .cornerRadius(3)
-                    .frame(width: 120, height: 6, alignment: .leading)
-                    .background(.black.opacity(0.08))
-                    .cornerRadius(3)
-                    .padding()
-                    .frame(width: width, height: 24, alignment: .center)
-                    .background(.black.opacity(0.1))
-                    .cornerRadius(12)
+                LoaderView(width: width)
                 
                 MenuRowView(title: "Account", icon: "gear")
                     .frame(width: width)
@@ -52,7 +43,9 @@ struct MenuView: View {
                 radius: 20,
                 x: 0, y: 20
             )
-            .padding(30)
+            .padding(.top, 30)
+            .padding(.horizontal, 30)
+            .padding(.bottom, 15)
             
             .overlay(
                 Image("Avatar")
@@ -63,12 +56,28 @@ struct MenuView: View {
                     .offset(y: -150)
             )
         }
-        .padding(.bottom, 10)
     }
 }
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
         MenuView()
+    }
+}
+
+struct LoaderView: View {
+    let width: CGFloat
+    
+    var body: some View {
+        Color.white
+            .frame(width: 38, height: 6, alignment: .center)
+            .cornerRadius(3)
+            .frame(width: 120, height: 6, alignment: .leading)
+            .background(.black.opacity(0.08))
+            .cornerRadius(3)
+            .padding()
+            .frame(width: width, height: 24, alignment: .center)
+            .background(.black.opacity(0.1))
+            .cornerRadius(12)
     }
 }

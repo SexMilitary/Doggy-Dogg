@@ -12,4 +12,5 @@ extension Color {
     static let profileGradient2 = Color("profileGradient-2")
     static let profileIcon = Color("profileIcon")
     static let profileGradientColors = [profileGradient1, profileGradient2]
+    static let profileBackground = Color("profileBackground")
 }
