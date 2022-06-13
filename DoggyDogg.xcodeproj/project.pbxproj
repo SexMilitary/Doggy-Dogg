@@ -23,6 +23,10 @@
 		1CA83506285286E4008811E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA834F4285286E0008811E9 /* ContentView.swift */; };
 		1CA83507285286E4008811E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA834F5285286E3008811E9 /* Assets.xcassets */; };
 		1CA83508285286E4008811E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA834F5285286E3008811E9 /* Assets.xcassets */; };
+		1CF973B92857D51B00CB5617 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF973B82857D51B00CB5617 /* Section.swift */; };
+		1CF973BA2857D51B00CB5617 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF973B82857D51B00CB5617 /* Section.swift */; };
+		1CF973BD2857D6F400CB5617 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF973BC2857D6F400CB5617 /* SectionView.swift */; };
+		1CF973BE2857D6F400CB5617 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF973BC2857D6F400CB5617 /* SectionView.swift */; };
 		1CFAA6BB28560526004C28C4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFAA6BA28560526004C28C4 /* MenuView.swift */; };
 		1CFAA6BC28560526004C28C4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFAA6BA28560526004C28C4 /* MenuView.swift */; };
 		1CFAA6BE28561783004C28C4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFAA6BD28561783004C28C4 /* Color+Extension.swift */; };
@@ -49,6 +53,8 @@
 		1CA834FA285286E3008811E9 /* DoggyDogg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoggyDogg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA83500285286E3008811E9 /* DoggyDogg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoggyDogg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA83502285286E4008811E9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		1CF973B82857D51B00CB5617 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		1CF973BC2857D6F400CB5617 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		1CFAA6BA28560526004C28C4 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		1CFAA6BD28561783004C28C4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		1CFAA6C328563B4D004C28C4 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -89,15 +95,8 @@
 			children = (
 				1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */,
 				1CA834F4285286E0008811E9 /* ContentView.swift */,
-				1C5944562855278600FC98F5 /* TitleView.swift */,
-				1C5944532855276500FC98F5 /* CardView.swift */,
-				1C594459285527B900FC98F5 /* BackCardView.swift */,
-				1C59445C285527D800FC98F5 /* BottomCardView.swift */,
-				1CFAA6C328563B4D004C28C4 /* Home.swift */,
-				1CFAA6C628565C59004C28C4 /* HomeView.swift */,
-				1CFAA6CC28565EF1004C28C4 /* AvatarView.swift */,
-				1CFAA6BA28560526004C28C4 /* MenuView.swift */,
-				1C5944602856009F00FC98F5 /* MenuRowView.swift */,
+				1CF973B72857D4A300CB5617 /* Profile */,
+				1CF973B62857D45F00CB5617 /* Home */,
 				1CFAA6BD28561783004C28C4 /* Color+Extension.swift */,
 				1CFAA6C928565EA4004C28C4 /* Constants.swift */,
 				1CA834F5285286E3008811E9 /* Assets.xcassets */,
@@ -120,6 +119,47 @@
 				1CA83502285286E4008811E9 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		1CF973B62857D45F00CB5617 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1CF973BB2857D59400CB5617 /* Model */,
+				1CF973BF2857D72700CB5617 /* Cells */,
+				1CFAA6C328563B4D004C28C4 /* Home.swift */,
+				1CFAA6C628565C59004C28C4 /* HomeView.swift */,
+				1CFAA6CC28565EF1004C28C4 /* AvatarView.swift */,
+				1CFAA6BA28560526004C28C4 /* MenuView.swift */,
+				1C5944602856009F00FC98F5 /* MenuRowView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1CF973B72857D4A300CB5617 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1C5944562855278600FC98F5 /* TitleView.swift */,
+				1C5944532855276500FC98F5 /* CardView.swift */,
+				1C594459285527B900FC98F5 /* BackCardView.swift */,
+				1C59445C285527D800FC98F5 /* BottomCardView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1CF973BB2857D59400CB5617 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CF973B82857D51B00CB5617 /* Section.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1CF973BF2857D72700CB5617 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1CF973BC2857D6F400CB5617 /* SectionView.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +262,9 @@
 			files = (
 				1CA83505285286E4008811E9 /* ContentView.swift in Sources */,
 				1CFAA6BE28561783004C28C4 /* Color+Extension.swift in Sources */,
+				1CF973BD2857D6F400CB5617 /* SectionView.swift in Sources */,
 				1CFAA6BB28560526004C28C4 /* MenuView.swift in Sources */,
+				1CF973B92857D51B00CB5617 /* Section.swift in Sources */,
 				1CFAA6C428563B4D004C28C4 /* Home.swift in Sources */,
 				1CFAA6CD28565EF1004C28C4 /* AvatarView.swift in Sources */,
 				1C59445D285527D800FC98F5 /* BottomCardView.swift in Sources */,
@@ -242,7 +284,9 @@
 			files = (
 				1CA83506285286E4008811E9 /* ContentView.swift in Sources */,
 				1CFAA6BF28561783004C28C4 /* Color+Extension.swift in Sources */,
+				1CF973BE2857D6F400CB5617 /* SectionView.swift in Sources */,
 				1CFAA6BC28560526004C28C4 /* MenuView.swift in Sources */,
+				1CF973BA2857D51B00CB5617 /* Section.swift in Sources */,
 				1CFAA6C528563B4D004C28C4 /* Home.swift in Sources */,
 				1CFAA6CE28565EF1004C28C4 /* AvatarView.swift in Sources */,
 				1C59445E285527D800FC98F5 /* BottomCardView.swift in Sources */,
