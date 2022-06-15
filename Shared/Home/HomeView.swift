@@ -9,50 +9,63 @@ import SwiftUI
 
 struct HomeView: View {
     @Binding var showProfile: Bool
+    @State var showUpdate = false
     
     var body: some View {
         VStack {
             HStack {
                 Text("Watching")
                     .font(.system(size: 28, weight: .bold, design: .default))
+                
                 Spacer()
+                
                 AvatarView(showProfile: $showProfile)
+                
+                Button(action: { showUpdate.toggle() }) {
+                    Image(systemName: "bell")
+                        .renderingMode(.template)
+                        .font(.system(size: 16, weight: .light))
+                        .frame(width: 36, height: 36)
+                        .foregroundColor(.accentColor)
+                        .background(.white)
+                        .clipShape(Circle())
+                        .shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: 1)
+                        .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 10)
+                }
+                .sheet(isPresented: $showUpdate) {
+                    ContentView()
+                }
             }
             .padding(.horizontal)
             .padding(.top, 30)
             
             GeometryReader { bounds in
                 ScrollView(.vertical) {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 0) {
-                            ForEach(sectionData) { item in
-                                GeometryReader { geometry in
-                                    SectionView(section: item)
-                                        .rotation3DEffect(
-                                            Angle(
-                                                degrees:
-                                                    Double(geometry.frame(in: .global).minX - 20) / -getAngleMultiplier(bounds: bounds)
-                                            ),
-                                            axis: (x: 0, y: 10, z: 0)
-                                        )
-                                }
-                                .frame(width: 275, height: 275)
-                            }
-                        }
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 60)
-                    }
+                    СarouselView()
                     Spacer()
                 }
             }
         }
     }
-    
-    func getAngleMultiplier(bounds: GeometryProxy) -> Double {
-        if bounds.size.width > 500 {
-            return 80
-        } else {
-            return 20
+}
+
+struct СarouselView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 0) {
+                ForEach(sectionData) { item in
+                    GeometryReader { geometry in
+                        SectionView(section: item).rotation3DEffect(
+                            Angle(degrees: Double(-geometry.frame(in: .global).minX) / 20),
+                            axis: (x: 0, y: 1, z: 0)
+                        )
+                    }
+                    .frame(width: 275, height: 275)
+                }
+            }
+            .padding(.top, 20)
+            .padding(.horizontal, 20)
+            .padding(.bottom, 60)
         }
     }
 }

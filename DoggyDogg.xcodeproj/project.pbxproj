@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3F78A4285A7CF6002D9877 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F78A3285A7CF6002D9877 /* Update.swift */; };
+		1C3F78A6285A7D59002D9877 /* UpdateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F78A5285A7D59002D9877 /* UpdateListView.swift */; };
 		1C5944542855276500FC98F5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944532855276500FC98F5 /* CardView.swift */; };
 		1C5944552855276500FC98F5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944532855276500FC98F5 /* CardView.swift */; };
 		1C5944572855278600FC98F5 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5944562855278600FC98F5 /* TitleView.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C3F78A3285A7CF6002D9877 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
+		1C3F78A5285A7D59002D9877 /* UpdateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateListView.swift; sourceTree = "<group>"; };
 		1C5944532855276500FC98F5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1C5944562855278600FC98F5 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		1C594459285527B900FC98F5 /* BackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackCardView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C3F78A2285A7CDE002D9877 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				1C3F78A7285A7D5F002D9877 /* Model */,
+				1C3F78A8285A7D6F002D9877 /* View */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
+		1C3F78A7285A7D5F002D9877 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C3F78A3285A7CF6002D9877 /* Update.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C3F78A8285A7D6F002D9877 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C3F78A5285A7D59002D9877 /* UpdateListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1CA834ED285286E0008811E9 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +126,9 @@
 				1CA834F4285286E0008811E9 /* ContentView.swift */,
 				1CF973B72857D4A300CB5617 /* Profile */,
 				1CF973B62857D45F00CB5617 /* Home */,
-				1CFAA6BD28561783004C28C4 /* Color+Extension.swift */,
+				1C3F78A2285A7CDE002D9877 /* Update */,
 				1CFAA6C928565EA4004C28C4 /* Constants.swift */,
+				1CFAA6BD28561783004C28C4 /* Color+Extension.swift */,
 				1CA834F5285286E3008811E9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -270,7 +300,9 @@
 				1C59445D285527D800FC98F5 /* BottomCardView.swift in Sources */,
 				1CFAA6C728565C59004C28C4 /* HomeView.swift in Sources */,
 				1C5944542855276500FC98F5 /* CardView.swift in Sources */,
+				1C3F78A4285A7CF6002D9877 /* Update.swift in Sources */,
 				1CA83503285286E4008811E9 /* DoggyDoggApp.swift in Sources */,
+				1C3F78A6285A7D59002D9877 /* UpdateListView.swift in Sources */,
 				1C59445A285527B900FC98F5 /* BackCardView.swift in Sources */,
 				1C5944612856009F00FC98F5 /* MenuRowView.swift in Sources */,
 				1C5944572855278600FC98F5 /* TitleView.swift in Sources */,
