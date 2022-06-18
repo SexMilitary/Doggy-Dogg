@@ -75,7 +75,6 @@ struct LoaderView: View {
             .frame(width: 120, height: 6, alignment: .leading)
             .background(.black.opacity(0.08))
             .cornerRadius(3)
-            .padding()
             .frame(width: width, height: 24, alignment: .center)
             .background(.black.opacity(0.1))
             .cornerRadius(12)

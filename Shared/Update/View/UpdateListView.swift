@@ -8,40 +8,40 @@
 import SwiftUI
 
 struct UpdateListView: View {
+    @ObservedObject var store = UpdateStore()
+    
     var body: some View {
         NavigationView {
-            List(updateData) { update in
-                NavigationLink(destination: Text(update.text)) {
-                    HStack {
-                        Image(update.image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 80, height: 80)
-                            .background(Color.black)
-                            .cornerRadius(20)
-                            .padding(.trailing, 4)
-                        
-                        VStack(alignment: .leading, spacing: 8.0) {
-                            Text(update.title)
-                                .font(.system(size: 20, weight: .bold))
-                            
-                            Text(update.text)
-                                .lineLimit(2)
-                                .font(.subheadline)
-                                .foregroundColor(Color.black.opacity(0.6))
-                            
-                            Text(update.date)
-                                .font(.caption)
-                                .fontWeight(.bold)
-                                .foregroundColor(.secondary)
-                        }
+            List {
+                ForEach(store.updates) { update in
+                    NavigationLink(destination: UpdateDetailView(update: update)) {
+                        UpdateCellView(update: update)
                     }
-                    .padding(.vertical, 8)
+                }
+                .onDelete { index in
+                    store.updates.remove(at: index.first!)
+                }
+                .onMove { (source: IndexSet, destination: Int) in
+                    store.updates.move(fromOffsets: source, toOffset: destination)
                 }
             }
+            
+            /// Navigation modifiers
             .navigationTitle("Upadates")
+            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarItems(
+                leading: Button(action: addUpdate) { Text("Add Update") },
+                trailing: EditButton()
+            )
         }
     }
+    
+    private func addUpdate() {
+        store.updates.append(
+            Update(image: "Card1", title: "New Item", text: "text", date: "Jan 1")
+        )
+    }
+    
 }
 
 struct UpdateListView_Previews: PreviewProvider {
