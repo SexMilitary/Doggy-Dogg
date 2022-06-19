@@ -27,7 +27,7 @@ struct UpdateListView: View {
             }
             
             /// Navigation modifiers
-            .navigationTitle("Upadates")
+            .navigationBarTitle("Upadates")
             .navigationViewStyle(StackNavigationViewStyle())
             .navigationBarItems(
                 leading: Button(action: addUpdate) { Text("Add Update") },

@@ -17,7 +17,6 @@ struct MenuRowView: View {
             Image(systemName: icon)
                 .frame(width: 32, height: 32, alignment: .leading)
                 .font(.system(size: 20, weight: .light, design: .default))
-                .symbolRenderingMode(.monochrome)
                 .foregroundColor(iconColor)
                 .imageScale(.large)
             Text(title)

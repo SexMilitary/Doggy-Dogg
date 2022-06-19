@@ -66,17 +66,26 @@ struct MenuView_Previews: PreviewProvider {
 }
 
 struct LoaderView: View {
+    
     let width: CGFloat
     
     var body: some View {
-        Color.white
-            .frame(width: 38, height: 6, alignment: .center)
-            .cornerRadius(3)
-            .frame(width: 120, height: 6, alignment: .leading)
-            .background(.black.opacity(0.08))
-            .cornerRadius(3)
-            .frame(width: width, height: 24, alignment: .center)
-            .background(.black.opacity(0.1))
-            .cornerRadius(12)
+        ZStack(alignment: .leading) {
+            Color.black.opacity(0.1)
+                .frame(width: width, height: 24, alignment: .leading)
+                .cornerRadius(12)
+            
+            Color.black.opacity(0.1)
+                .frame(width: 120, height: 6, alignment: .leading)
+                .cornerRadius(3)
+                .padding(.horizontal)
+            
+            Color.white
+                .frame(width: 35, height: 6, alignment: .leading)
+                .cornerRadius(3)
+                .padding(.horizontal)
+        }
+        
     }
+    
 }

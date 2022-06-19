@@ -28,6 +28,9 @@
 		1CBBC783285E753600FF74BE /* UpdateCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBC782285E753600FF74BE /* UpdateCellView.swift */; };
 		1CBBC785285F842200FF74BE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBC784285F842200FF74BE /* TabBarView.swift */; };
 		1CBBC787285F853300FF74BE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBC786285F853300FF74BE /* ProfileView.swift */; };
+		1CBBC789285F957D00FF74BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBC788285F957D00FF74BE /* AppDelegate.swift */; };
+		1CBBC78B285F95F000FF74BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBBC78A285F95F000FF74BE /* SceneDelegate.swift */; };
+		1CBBC790285F9D8700FF74BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CBBC78F285F9D8700FF74BE /* LaunchScreen.storyboard */; };
 		1CF973B92857D51B00CB5617 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF973B82857D51B00CB5617 /* Section.swift */; };
 		1CF973BA2857D51B00CB5617 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF973B82857D51B00CB5617 /* Section.swift */; };
 		1CF973BD2857D6F400CB5617 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF973BC2857D6F400CB5617 /* SectionView.swift */; };
@@ -64,6 +67,10 @@
 		1CBBC782285E753600FF74BE /* UpdateCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCellView.swift; sourceTree = "<group>"; };
 		1CBBC784285F842200FF74BE /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		1CBBC786285F853300FF74BE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		1CBBC788285F957D00FF74BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1CBBC78A285F95F000FF74BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1CBBC78C285F99BB00FF74BE /* DoggyDogg--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DoggyDogg--iOS--Info.plist"; sourceTree = "<group>"; };
+		1CBBC78F285F9D8700FF74BE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CF973B82857D51B00CB5617 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		1CF973BC2857D6F400CB5617 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		1CFAA6BA28560526004C28C4 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -123,6 +130,7 @@
 		1CA834ED285286E0008811E9 = {
 			isa = PBXGroup;
 			children = (
+				1CBBC78C285F99BB00FF74BE /* DoggyDogg--iOS--Info.plist */,
 				1CA834F2285286E0008811E9 /* Shared */,
 				1CA83501285286E3008811E9 /* macOS */,
 				1CA834FB285286E3008811E9 /* Products */,
@@ -132,6 +140,8 @@
 		1CA834F2285286E0008811E9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1CBBC788285F957D00FF74BE /* AppDelegate.swift */,
+				1CBBC78A285F95F000FF74BE /* SceneDelegate.swift */,
 				1CA834F3285286E0008811E9 /* DoggyDoggApp.swift */,
 				1CBBC784285F842200FF74BE /* TabBarView.swift */,
 				1CF973B72857D4A300CB5617 /* Profile */,
@@ -140,6 +150,7 @@
 				1CFAA6C928565EA4004C28C4 /* Constants.swift */,
 				1CFAA6BD28561783004C28C4 /* Color+Extension.swift */,
 				1CA834F5285286E3008811E9 /* Assets.xcassets */,
+				1CBBC78F285F9D8700FF74BE /* LaunchScreen.storyboard */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -291,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA83507285286E4008811E9 /* Assets.xcassets in Resources */,
+				1CBBC790285F9D8700FF74BE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,11 +321,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBBC789285F957D00FF74BE /* AppDelegate.swift in Sources */,
 				1CFAA6BE28561783004C28C4 /* Color+Extension.swift in Sources */,
 				1CF973BD2857D6F400CB5617 /* SectionView.swift in Sources */,
 				1CFAA6BB28560526004C28C4 /* MenuView.swift in Sources */,
 				1CF973B92857D51B00CB5617 /* Section.swift in Sources */,
 				1CFAA6C428563B4D004C28C4 /* Home.swift in Sources */,
+				1CBBC78B285F95F000FF74BE /* SceneDelegate.swift in Sources */,
 				1CFAA6CD28565EF1004C28C4 /* AvatarView.swift in Sources */,
 				1C59445D285527D800FC98F5 /* BottomCardView.swift in Sources */,
 				1CFAA6C728565C59004C28C4 /* HomeView.swift in Sources */,
@@ -475,12 +489,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "DoggyDogg--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,12 +518,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "DoggyDogg--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

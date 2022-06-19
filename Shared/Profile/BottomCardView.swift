@@ -9,32 +9,35 @@ import SwiftUI
 
 struct BottomCardView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            Rectangle()
-                .frame(width: 40, height: 5)
-                .cornerRadius(3)
-                .opacity(0.1)
+        ZStack {
+            Color.white
             
-            Text("This sertificate is proof that Meng to has achieved the UI Design cource eith approval from a Design+Code instructor.")
-                .multilineTextAlignment(.center)
-                .font(.subheadline)
-                .lineSpacing(4)
-            
-            Spacer()
+            VStack(spacing: 20) {
+                Rectangle()
+                    .frame(width: 40, height: 5)
+                    .cornerRadius(3)
+                    .opacity(0.1)
+                
+                Text("This sertificate is proof that Meng to has achieved the UI Design cource eith approval from a Design+Code instructor.")
+                    .multilineTextAlignment(.center)
+                    .font(.subheadline)
+                    .lineSpacing(4)
+                
+                Spacer()
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.top, 10)
+            .padding(.horizontal, 20)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(.top, 10)
-        .padding(.horizontal, 20)
-        .background(.white)
         .cornerRadius(30)
-        .shadow(radius: 20)
+        .shadow(color: .black.opacity(0.1), radius: 30, x: 0, y: -10)
     }
 }
 
 struct BottomCardView_Previews: PreviewProvider {
     static var previews: some View {
         BottomCardView()
-            .previewInterfaceOrientation(.portrait)
             .previewLayout(.sizeThatFits)
+            .padding(.vertical)
     }
 }

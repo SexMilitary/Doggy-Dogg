@@ -25,7 +25,6 @@ struct Home: View {
             
             HomeView(showProfile: $showProfile)
                 .padding(.top, 44)
-                .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .offset(y: showProfile ? -250 : 0)
                 .scaleEffect(showProfile ? 0.9 : 1)

@@ -21,8 +21,7 @@ struct UpdateDetailView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding()
-            .navigationBarTitle(update.title)
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitle(Text(update.title), displayMode: .inline)
         }
     }
 }

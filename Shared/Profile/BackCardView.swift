@@ -18,7 +18,6 @@ struct BackCardView: View {
 struct BackCardView_Previews: PreviewProvider {
     static var previews: some View {
         BackCardView()
-            .previewInterfaceOrientation(.portrait)
             .previewLayout(.sizeThatFits)
     }
 }
