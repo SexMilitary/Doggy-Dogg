@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
-//  Shared
+//  ProfileView.swift
+//  DoggyDogg (iOS)
 //
-//  Created by Максим Чикинов on 09.06.2022.
+//  Created by Максим Чикинов on 19.06.2022.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct ProfileView: View {
     
     @State var show: Bool = false
     @State var scale: Bool = false
@@ -156,11 +156,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .previewDevice("iPhone 13")
-        ContentView()
-            .previewDevice("iPhone 8")
+        ProfileView()
     }
 }

@@ -16,6 +16,12 @@ struct Home: View {
         ZStack {
             Color.profileBackground
                 .edgesIgnoringSafeArea(.all)
+                .clipShape(
+                    RoundedRectangle(
+                        cornerRadius: 10,
+                        style: .continuous
+                    )
+                )
             
             HomeView(showProfile: $showProfile)
                 .padding(.top, 44)
@@ -24,9 +30,9 @@ struct Home: View {
                 .offset(y: showProfile ? -250 : 0)
                 .scaleEffect(showProfile ? 0.9 : 1)
                 .shadow(
-                    color: .black.opacity(0.2),
+                    color: .black.opacity(0.1),
                     radius: 20,
-                    x: 0, y: 20
+                    x: 0, y: 50
                 )
                 .rotation3DEffect(
                     Angle(degrees: showProfile ? (viewState.height / 60 - CGFloat(10)) : 0),
@@ -49,18 +55,19 @@ struct Home: View {
                 }
             
                 .gesture(
-                    DragGesture().onChanged({ value in
-                        viewState = value.translation
-                        if viewState.height < -200 {
-                            viewState.height = -200
-                        }
-                    })
-                    .onEnded({ _ in
-                        if viewState.height > 50 {
-                            showProfile = false
-                        }
-                        viewState = .zero
-                    })
+                    DragGesture()
+                        .onChanged({ value in
+                            viewState = value.translation
+                            if viewState.height < -200 {
+                                viewState.height = -200
+                            }
+                        })
+                        .onEnded({ _ in
+                            if viewState.height > 50 {
+                                showProfile = false
+                            }
+                            viewState = .zero
+                        })
                 )
         }
     }
